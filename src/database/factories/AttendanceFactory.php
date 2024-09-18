@@ -1,0 +1,24 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
+
+class AttendanceFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'user_id' => User::inRandomOrder()->first()->id,// Userモデルのファクトリを使用
+            'date' => '2024-09-09',
+            'punchIn' => '2024-09-09 09:00:00',
+            'punchOut' => null,
+        ];
+    }
+}
