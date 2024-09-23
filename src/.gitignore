@@ -5,6 +5,7 @@
 /src/vendor
 /src/env_file
 /src/env_file/.env.*
+/src/env_file/*.env.*
 /src/env_file/.env.*.backup
 /src/.phpunit.result.cache
 /src/docker-compose.override.yml
