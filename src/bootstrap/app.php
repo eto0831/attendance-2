@@ -19,12 +19,12 @@ $app = new Illuminate\Foundation\Application(
 switch ($_SERVER['HTTP_HOST'] ?? 'localhost') {
     // 開発環境
     case 'localhost':
-        $app->loadEnvironmentFrom('env/.env.dev');
+        $app->loadEnvironmentFrom('env/.env.local');
         break;
 
     // 本番環境
     case 'prod.maydomain.com':
-        $app->loadEnvironmentFrom('env/.env.prod');
+        $app->loadEnvironmentFrom('env/.env.production');
         break;
 }
 /*
