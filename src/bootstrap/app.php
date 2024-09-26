@@ -15,18 +15,6 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
-// ↓ 追加
-switch ($_SERVER['HTTP_HOST'] ?? 'localhost') {
-    // 開発環境
-    case 'localhost':
-        $app->loadEnvironmentFrom('env_file/.env.local');
-        break;
-
-    // 本番環境
-    case 'prod.maydomain.com':
-        $app->loadEnvironmentFrom('env_file/.env.production');
-        break;
-}
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
