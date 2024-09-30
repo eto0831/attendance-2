@@ -1,3 +1,11 @@
+resources\views\auth\verify.blade.php
+@extends('layouts.app')
+
+@section('css')
+<link rel="stylesheet" href="{{ asset('css/verify-email.css') }}">
+@endsection
+
+@section('content')
 <div>
 	<h1><a href="/">確認メールの送信</a></h1>
 	<div>
@@ -8,7 +16,8 @@
 			<p ><a href="/">TOPに戻る</a></p>
 		@else
 			<p>
-				確認メールを送信してください！！
+				メールを送信しました。メールからメールアドレスの認証をお願いします。<br>
+                メールが届いていない場合は、下記のボタンをクリックしてください</a>。再送いたします。
 			</p>
 			<form method="post" action="{{ route('verification.send') }}">
 				@method('post')
@@ -20,3 +29,4 @@
 		@endif
 	</div>
 </div>
+@endsection
