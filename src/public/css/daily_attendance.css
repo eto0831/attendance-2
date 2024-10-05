@@ -72,6 +72,6 @@ button[disabled] {
     cursor: not-allowed !important; /* カーソルをポインタ以外に */
 }
 
-*{
+/* *{
     border: solid 1px red;
-}
+} */

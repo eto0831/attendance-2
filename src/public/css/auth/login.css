@@ -1,0 +1,81 @@
+.login__content {
+    margin: 0 auto;
+    padding: 30px 15px;
+    max-width: 1230px;
+}
+
+.login-form__heading {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.form {
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+}
+
+.form__group {
+    margin-bottom: 8px;
+}
+
+.form__error {
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
+
+.form__input--text input {
+    padding: 10px;
+    width: 100%;
+    height: 48px;
+    border: 2px solid #909090;
+    border-radius: 5px;
+    background: #eee;
+
+    appearance: none;
+}
+
+.form__button {
+    margin-top: 8px;
+}
+
+.form__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 5px;
+    background: #214be0;
+    color: #fff;
+    cursor: pointer;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.register__link,
+.register__link a {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #214be0;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.register__description {
+    color: #909090;
+    margin-bottom: 0;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}

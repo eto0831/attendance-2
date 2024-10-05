@@ -1,83 +1,113 @@
 .header {
     background: white;
-  }
-  main{
+    height: 80px;
+}
+main {
     background-color: #eee;
+    min-height: calc(100vh - 130px);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    color: #909090;
+    font-size: 16px;
   }
-  .header__inner {
+
+textarea::placeholder,
+input::placeholder {
+    color: #909090;
+    opacity: 1;
+    font-size: 16px;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    
+}
+
+.header__inner {
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
-  }
-  
-  .header-utilities {
+}
+
+.header-utilities {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .header__logo {
+}
+
+.header__logo {
     color: #000;
     text-decoration: none;
     font-weight: bold;
-    font-size: 24px;
-  }
-  
-  .header-utilities nav {
-    width: 18%;
-  }
-  
-  .header-nav {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.header-utilities nav {
+    width: 30%;
+}
+
+.header-nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-  
-  .header-nav__link {
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.header-nav__link {
     color: #000;
     text-decoration: none;
-  }
+    width: 33%;
+}
 
-  .header-nav__button {
+.header-nav__button {
     border: none;
     background: transparent;
     color: #000;
     font-size: 16px;
     cursor: pointer;
-  }
+}
 
-  .footer__inner {
+.footer__inner {
     text-align: center;
-  }
+}
+
+.footer__copy {
+    font-family: sans-serif;
+}
 
 /* ページネーション */
 .pagination {
-  display: flex;
-  justify-content: center;
-  list-style: none;
+    display: flex;
+    justify-content: center;
+    list-style: none;
 }
 
 .pagination li:not(.active) {
-  border: 1px solid #E0DFDE;
-  padding: 4px 12px;
+    border: 1px solid #e0dfde;
+    padding: 4px 12px;
 }
 
 .pagination li:not(:last-child) {
-  border-right: none;
+    border-right: none;
 }
 
 .pagination a {
-  color: #2384CF;
-  text-decoration: none;
+    color: #2384cf;
+    text-decoration: none;
 }
 
 .pagination__link {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .active {
-  padding: 4px 12px;
-  border: 1px solid #2384CF;
-  background-color: #2384CF;
-  color: #FFF;
+    padding: 4px 12px;
+    border: 1px solid #2384cf;
+    background-color: #2384cf;
+    color: #fff;
 }
