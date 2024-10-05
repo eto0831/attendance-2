@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
+use App\Models\Attendance;
+use Carbon\Carbon;
 
 class AttendanceFactory extends Factory
 {
@@ -14,10 +16,11 @@ class AttendanceFactory extends Factory
      */
     public function definition()
     {
+        $date = Carbon::now()->subDays(2); // 前々日
+
         return [
-            'user_id' => User::inRandomOrder()->first()->id,// Userモデルのファクトリを使用
-            'date' => '2024-09-09',
-            'punchIn' => '2024-09-09 09:00:00',
+            'date' => $date->toDateString(),
+            'punchIn' => $date->setTime(9, 0, 0)->toDateTimeString(),
             'punchOut' => null,
         ];
     }

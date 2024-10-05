@@ -3,6 +3,8 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\Rest;
+use Carbon\Carbon;
 
 class RestFactory extends Factory
 {
@@ -13,10 +15,12 @@ class RestFactory extends Factory
      */
     public function definition()
     {
+        $date = Carbon::now()->subDays(2); // 前々日
+
         return [
             'attendance_id' => null, // 後でAttendanceモデルと紐付ける
-            'rest_date' => '2024-09-09',
-            'breakIn' => '2024-09-09 15:00:00',
+            'rest_date' => $date->toDateString(),
+            'breakIn' => $date->setTime(15, 0, 0)->toDateTimeString(),
             'breakOut' => null,
         ];
     }
