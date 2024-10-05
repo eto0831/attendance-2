@@ -33,12 +33,12 @@ services:
     phpmyadmin:
         image: phpmyadmin/phpmyadmin
         environment:
-            - PMA_ARBITRARY=1
-            - PMA_HOST=mysql
-            - PMA_USER=laravel_user
-            - PMA_PASSWORD=laravel_pass
+            - PMA_ARBITRARY=${PMA_ARBITRARY}
+            - PMA_HOST=${PMA_HOST}
+            - PMA_USER=${PMA_USER}
+            - PMA_PASSWORD=${PMA_PASSWORD}
         depends_on:
-            - mysql
+            - mysql  # ローカルのMySQLを使用しない場合は削除可能
         ports:
             - 8080:80
 
