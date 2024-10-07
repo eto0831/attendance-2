@@ -45,6 +45,11 @@
       <div class="form__input--text">
         <input type="password" name="password_confirmation" placeholder="確認用パスワード" />
       </div>
+      <div class="form__error">
+        @error('password_confirmation')
+        {{ $message }}
+        @enderror
+      </div>
     </div>
     <div class="form__button">
       <button class="form__button-submit" type="submit">登録</button>
