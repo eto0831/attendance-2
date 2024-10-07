@@ -44,7 +44,7 @@
       <td class="attendance-table__item">{{ $attendance['punchIn'] }}</td>
       <td class="attendance-table__item">{{ $attendance['punchOut'] }}</td>
       <td class="attendance-table__item">
-        {{ $attendance->rests->isNotEmpty() ? $attendance->rests->first()->getTotalBreakTimeAttribute() : '00:00' }}
+        {{ $attendance->rests->isNotEmpty() ? $attendance->rests->first()->getTotalBreakTimeAttribute() : '0:00' }}
       </td>
       <td class="attendance-table__item">{{ $attendance->totalWorkingTime ?? '未退勤' }}</td>
       <td class="attendance-table__item">{{ $attendance->user_id }}</td>

@@ -25,6 +25,8 @@ class Attendance extends Model
     //↓この部分は０時またぎように追加バグが起きたら消して
     protected $casts = [
         'date' => 'date',
+        'punchIn' => 'datetime',
+        'punchOut' => 'datetime',
     ];
 
     public function scopeDateSearch($query, $date)
