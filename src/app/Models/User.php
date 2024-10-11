@@ -84,4 +84,16 @@ class User extends Authenticatable implements MustVerifyEmail
             return 5;
         }
     }
+
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if (!empty($keyword)) {
+            $query->where(function ($q) use ($keyword) {
+                $q->where('email', 'like', '%' . $keyword . '%')
+                    ->where('id', 'like', '%' . $keyword . '%')
+                    ->orWhere('name', 'like', '%' . $keyword . '%');                  // 必要に応じて他のカラムを追加
+            });
+        }
+    }
+
 }

@@ -24,7 +24,6 @@ use Illuminate\Auth\Events\Verified;
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/', [AttendanceController::class, 'index']);
     Route::get('/daily_attendance', [AttendanceController::class, 'dailyAttendance']);
-    Route::get('/search', [AttendanceController::class, 'search']);
     Route::post('/punchin', [AttendanceController::class, 'punchIn']);
     Route::post('/punchout', [AttendanceController::class, 'punchOut']);
     Route::post('/breakin', [AttendanceController::class, 'breakIn']);
@@ -32,4 +31,5 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/delete', [AttendanceController::class, 'destroy']);
     Route::get('/users', [UserController::class, 'index']);
     Route::get('/users/user_attendance', [AttendanceController::class, 'userAttendance']);
+    Route::match(['get', 'post'], '/users/search', [UserController::class, 'search']);
 });

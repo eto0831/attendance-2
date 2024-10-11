@@ -5,10 +5,6 @@
 @endsection
 
 @section('content')
-<div class="attendance__alert">
-  // メッセージ機能
-</div>
-
 <div class="attendance__content">
   <div class="welcome-message">
     <p class="welcome-message__inner">{{ auth()->user()->name }}さんの勤怠詳細</p>

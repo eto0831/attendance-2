@@ -5,28 +5,23 @@
 @endsection
 
 @section('content')
-<div class="attendance__alert">
-  // メッセージ機能
-</div>
-<p>userId: {{ auth()->user()->id }} userName: {{ auth()->user()->name }}</p>
-
-
-{{-- <form action="/search" method="get">
+<form class="search-form" action="/users/search" method="get">
   @csrf
-  <div class="contact-search">
-    <input type="date" class="search-form__item-input" name="search_date">
+  <div class="users-search">
+      <input type="text" class="search-form__item-input" placeholder="名前やメールアドレスを入力してください" name="keyword"
+          value="{{ old('keyword') }}">
   </div>
   <div class="search-form__button">
-    <button class="search-form__button-submit" type="submit">検索</button>
+      <button class="search-form__button-submit" type="submit">検索</button>
   </div>
-</form> --}}
+</form>
 
 <div class="attendance-table">
   <table class="attendance-table__inner">
     <tr class="attendance-table__row">
-      <th class="attendance-table__header">user_id</th>
+      <th class="attendance-table__header">ユーザーID</th>
       <th class="attendance-table__header">名前</th>
-      <th class="attendance-table__header">email</th>
+      <th class="attendance-table__header">メールアドレス</th>
     </tr>
     @foreach($users as $user)
 
