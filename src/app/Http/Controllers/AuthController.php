@@ -10,5 +10,5 @@ use App\Http\Controllers\AttendanceController;
 
 class AuthController extends Controller
 {
-    
+    //
 }

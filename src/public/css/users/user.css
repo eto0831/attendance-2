@@ -24,6 +24,15 @@
     max-width: 1230px;
 }
 
+.attendance__heading {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+}
+
 .attendance-table {
     margin: 30px auto;
     width: 80%;
@@ -35,7 +44,11 @@
 }
 
 .attendance-table__row {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
+}
+
+.attendance-table__row:first-child { /* 最初の行のみに適用 */
+    border-top: 2px solid #ddd;
 }
 
 .attendance-table__header {

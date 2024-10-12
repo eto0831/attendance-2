@@ -17,7 +17,7 @@ class AttendanceController extends Controller
         $this->autoPunchOutAndIn(auth()->user());
 
         $status = auth()->user()->getAttendanceStatus();
-        $attendances = Attendance::with('user', 'rests')->paginate(100);
+        $attendances = Attendance::with('user', 'rests');
 
         // ボタンの活性/非活性を制御するための情報をビューに渡す
         return view('index', compact('attendances'), [
@@ -53,15 +53,6 @@ class AttendanceController extends Controller
             'nextDate' => $nextDate,
         ]);
     }
-
-    // public function search(Request $request)
-    // {
-    //     $attendances = Attendance::with('user', 'rests')->dateSearch($request->date)->paginate(50);
-    //     $users = User::all();
-    //     $rests = Rest::all();
-    //     return view('daily_attendance', compact('attendances', 'users', 'rests'));
-    // }
-
 
     public function punchIn(Request $request)
     {
@@ -163,8 +154,6 @@ class AttendanceController extends Controller
 
         return redirect()->back()->with('my_status', '休憩開け打刻が完了しました');
     }
-
-    
 
     public function destroy(Request $request)
     {

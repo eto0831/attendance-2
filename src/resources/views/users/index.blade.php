@@ -5,6 +5,10 @@
 @endsection
 
 @section('content')
+<div class="attendance__heading">
+  <h2 class="welcome-message__inner">ユーザー一覧</h2>
+</div>
+
 <form class="search-form" action="/users/search" method="get">
   @csrf
   <div class="users-search">
@@ -19,7 +23,7 @@
 <div class="attendance-table">
   <table class="attendance-table__inner">
     <tr class="attendance-table__row">
-      <th class="attendance-table__header">ユーザーID</th>
+      <th class="attendance-table__header">ID</th>
       <th class="attendance-table__header">名前</th>
       <th class="attendance-table__header">メールアドレス</th>
     </tr>

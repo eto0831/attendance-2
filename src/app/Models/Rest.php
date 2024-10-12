@@ -19,20 +19,22 @@ class Rest extends Model
 
     public function getTotalBreakTimeAttribute()
 {
-    // attendance に紐づく rests を取得
     $rests = $this->attendance->rests;
 
-    if ($rests->isNotEmpty()) { // rests が空でない場合のみ計算
-        // 休憩時間の合計を計算 (分単位)
-        $totalBreakTimeInMinutes = $rests->sum(function ($rest) {
+    if ($rests->isNotEmpty()) {
+        $totalBreakTimeInSeconds = $rests->sum(function ($rest) {
             return $rest->breakIn && $rest->breakOut
-                ? Carbon::parse($rest->breakOut)->diffInMinutes(Carbon::parse($rest->breakIn))
+                ? Carbon::parse($rest->breakOut)->diffInSeconds(Carbon::parse($rest->breakIn))
                 : 0;
         });
 
-        return floor($totalBreakTimeInMinutes / 60) . ':' . str_pad($totalBreakTimeInMinutes % 60, 2, '0', STR_PAD_LEFT);
+        $hours = floor($totalBreakTimeInSeconds / 3600);
+        $minutes = floor(($totalBreakTimeInSeconds % 3600) / 60);
+        $seconds = $totalBreakTimeInSeconds % 60;
+
+        return sprintf('%02d:%02d:%02d', $hours, $minutes, $seconds);
     } else {
-        return '00:00'; // rests が空の場合は '00:00' を返す
+        return '00:00:00';
     }
 }
 

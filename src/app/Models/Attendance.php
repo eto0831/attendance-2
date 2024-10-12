@@ -22,7 +22,7 @@ class Attendance extends Model
         return $this->hasMany(Rest::class);
     }
 
-    //↓この部分は０時またぎように追加バグが起きたら消して
+    //↓この部分は０時またぎように追加
     protected $casts = [
         'date' => 'date',
         'punchIn' => 'datetime',
@@ -37,24 +37,29 @@ class Attendance extends Model
     }
 
     public function getTotalWorkingTimeAttribute()
-    {
-        if ($this->punchIn && $this->punchOut) {
-            $punchInTime = Carbon::parse($this->punchIn);
-            $punchOutTime = Carbon::parse($this->punchOut);
-            $totalWorkingTime = $punchOutTime->diffInMinutes($punchInTime);
+{
+    if ($this->punchIn && $this->punchOut) {
+        $punchInTime = Carbon::parse($this->punchIn);
+        $punchOutTime = Carbon::parse($this->punchOut);
+        $totalWorkingTime = $punchOutTime->diffInMinutes($punchInTime);
 
-            $totalBreakTime = $this->rests->sum(function ($rest) {
-                return $rest->breakIn && $rest->breakOut
-                    ? Carbon::parse($rest->breakOut)->diffInMinutes(Carbon::parse($rest->breakIn))
-                    : 0;
-            });
+        $totalBreakTime = $this->rests->sum(function ($rest) {
+            return $rest->breakIn && $rest->breakOut
+                ? Carbon::parse($rest->breakOut)->diffInMinutes(Carbon::parse($rest->breakIn))
+                : 0;
+        });
 
-            $actualWorkingTime = $totalWorkingTime - $totalBreakTime;
+        $actualWorkingTime = $totalWorkingTime - $totalBreakTime;
 
-            return floor($actualWorkingTime / 60) . ':' . str_pad($actualWorkingTime % 60, 2, '0', STR_PAD_LEFT);
-        } else {
-            return null;
-        }
+        // ここで修正
+        $hours = str_pad(floor($actualWorkingTime / 3600), 2, '0', STR_PAD_LEFT); // 時間を計算
+        $minutes = str_pad(floor(($actualWorkingTime % 3600) / 60), 2, '0', STR_PAD_LEFT); // 分を計算
+        $seconds = str_pad($actualWorkingTime % 60, 2, '0', STR_PAD_LEFT); // 秒を計算
+
+        return $hours . ':' . $minutes . ':' . $seconds;
+    } else {
+        return null;
     }
+}
 
 }
