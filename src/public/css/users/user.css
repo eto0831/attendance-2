@@ -16,8 +16,6 @@
     margin: 0;
 }
 
-
-
 .attendance__content {
     margin: 0 auto;
     padding: 30px 15px;
@@ -45,21 +43,34 @@
 
 .attendance-table__row {
     border-bottom: 2px solid #ddd;
+
 }
 
-.attendance-table__row:first-child { /* 最初の行のみに適用 */
+.attendance-table__row:first-child {
     border-top: 2px solid #ddd;
 }
 
 .attendance-table__header {
-    padding: 12px;
-    width: 20%;
+    padding: 16px 8px;
+
     font-weight: bold;
+    text-align: left;
 }
 
 .attendance-table__item {
-    padding: 12px;
-    width: 20%;
+    padding: 16px 8px ;
+
+    text-align: left;
+}
+
+.attendance-table__header:first-of-type,
+.attendance-table__item:first-of-type {
+  padding-left: 48px;
+}
+
+.attendance-table__header:last-of-type,
+.attendance-table__item:last-of-type {
+  padding-right: 0px;
 }
 
 button[disabled] {

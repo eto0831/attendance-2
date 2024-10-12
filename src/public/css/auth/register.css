@@ -40,10 +40,6 @@
     appearance: none;
 }
 
-.form__button {
-    margin-top: 28px;
-}
-
 .form__button-submit {
     padding: 10px;
     width: 100%;

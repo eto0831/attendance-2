@@ -37,9 +37,9 @@
         <form class="delete-form" action="/users/user_attendance" method="get">
           @method('GET')
           @csrf
-          <div class="delete-form__button">
+          <div class="detail-form__button">
             <input type="hidden" name="id" value="{{ $user['id'] }}">
-            <button class="delete-form__button-submit" type="submit">ユーザー別勤怠</button>
+            <button class="detail-form__button-submit" type="submit">ユーザー別勤怠</button>
           </div>
         </form>
       </td>
@@ -57,7 +57,7 @@
 
     @endforeach
   </table>
-  {{ $users->links('vendor.pagination.custom') }}
+  {{ $users->withQueryString()->links('vendor.pagination.custom') }}
 </div>
 </div>
 @endsection

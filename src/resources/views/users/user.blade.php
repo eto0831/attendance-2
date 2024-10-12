@@ -34,7 +34,7 @@
 
       @endforeach
     </table>
-    {{ $attendances->links('vendor.pagination.custom') }}
+    {{ $attendances->withQueryString()->links('vendor.pagination.custom') }}
   </div>
 </div>
 </div>

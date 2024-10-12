@@ -44,6 +44,12 @@
 .search-form input{
     width: 350px;
     height: 38px;
+    padding: 10px;
+    border: 2px solid #909090;
+    border-radius: 5px;
+    background: #eee;
+
+    appearance: none;
 }
 
 .search-form button{
@@ -91,9 +97,22 @@
     width: 20%;
 }
 
-button[disabled] {
-    background-color: #ccc; /* グレーアウト */
-    cursor: not-allowed !important; /* カーソルをポインタ以外に */
+.detail-form__button{
+    height: 80%;
+}
+
+.detail-form__button-submit{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    background: #214be0;
+    color: #fff;
+    cursor: pointer;
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
 }
 
 /* *{

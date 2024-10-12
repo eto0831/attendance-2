@@ -8,7 +8,7 @@
 <div class="attendance__content">
   <div class="date-navigation">
     <a href="{{ url()->current() }}?search_date={{ $previousDate }}" class="date-navigation__prev">&lt;</a>
-    <span class="date-navigation__current">{{ $currentDate }}</span>
+    <h2 class="date-navigation__current">{{ $currentDate }}</h2>
     <a href="{{ url()->current() }}?search_date={{ $nextDate }}" class="date-navigation__next">&gt;</a>
   </div>
 

@@ -24,12 +24,15 @@
     max-width: 1230px;
 }
 
-.date-navigation, a {
+.date-navigation{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
     text-decoration: none;
     color: #000;
     text-align: center;
     margin: 0 5px;
-    font-size: 20px;
+    align-items: center;
 }
 
 .date-navigation a {
@@ -39,6 +42,8 @@
     padding: 3px 5px;
     font-weight: bold;
     font-size: 18px;
+    width: 40px;
+    text-decoration: none;
 }
 
 
