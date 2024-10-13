@@ -41,11 +41,11 @@ class Attendance extends Model
     if ($this->punchIn && $this->punchOut) {
         $punchInTime = Carbon::parse($this->punchIn);
         $punchOutTime = Carbon::parse($this->punchOut);
-        $totalWorkingTime = $punchOutTime->diffInMinutes($punchInTime);
+        $totalWorkingTime = $punchOutTime->diffInSeconds($punchInTime);
 
         $totalBreakTime = $this->rests->sum(function ($rest) {
             return $rest->breakIn && $rest->breakOut
-                ? Carbon::parse($rest->breakOut)->diffInMinutes(Carbon::parse($rest->breakIn))
+                ? Carbon::parse($rest->breakOut)->diffInSeconds(Carbon::parse($rest->breakIn))
                 : 0;
         });
 

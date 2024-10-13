@@ -3,10 +3,8 @@
 }
 
 .verify-email__heading {
-    margin-bottom: 20px;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
     font-size: 18px;
     height: 100%;
 }
@@ -17,17 +15,28 @@
 }
 
 .send-mail__button-submit {
+    margin-top: 30px;
     padding: 10px;
-    width: 100%;
+    width: 30%;
     height: 48px;
     border: none;
     border-radius: 5px;
     background: #214be0;
     color: #fff;
     cursor: pointer;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 16px;
-    width: 30%;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+.Verify-email__message a{
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    color: #214be0;
 }

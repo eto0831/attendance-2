@@ -5,12 +5,12 @@
 }
 
 .login-form__heading {
-    margin-bottom: 20px;
+    margin-bottom: 25spx;
     text-align: center;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+}
+
+.login-form__heading h2 {
+    font-size: 22px;
 }
 
 .form {
@@ -53,10 +53,11 @@
     background: #214be0;
     color: #fff;
     cursor: pointer;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .register__link,
@@ -65,17 +66,11 @@
     text-align: center;
     text-decoration: none;
     color: #214be0;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 16px;
 }
 
 .register__description {
     color: #909090;
     margin-bottom: 0;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 16px;
 }

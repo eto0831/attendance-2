@@ -12,7 +12,7 @@
 	<div class="Verify-email__message">
 		@if (session('status') === 'verification-link-sent')
 		<p>
-			登録したメールアドレスを確認してください！！
+			登録したメールアドレスを確認してください。
 		</p>
 		<p><a href="/">TOPに戻る</a></p>
 		@else

@@ -5,6 +5,10 @@
 main {
     background-color: #eee;
     min-height: calc(100vh - 130px);
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 body {
@@ -22,10 +26,11 @@ textarea::placeholder,
 input::placeholder {
     color: #909090;
     opacity: 1;
-    font-size: 16px;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
     font-weight: 600;
+    font-style: normal;
+    font-size: 16px;
 }
 
 .header__inner {
@@ -43,9 +48,9 @@ input::placeholder {
 .header__logo {
     color: #000;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 30px;
-    font-family: sans-serif;
+    font-size: 36px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 .header-utilities nav {
@@ -58,10 +63,11 @@ input::placeholder {
     justify-content: space-around;
     gap: 30px;
     text-align: center; /* 中央揃え */
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; /* フォントファミリー */
-    font-weight: 600; /* フォントウェイト */
     font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .header-nav__link {
@@ -76,10 +82,11 @@ input::placeholder {
     color: #000;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 600;
     text-align: center; /* 中央揃え */
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif; /* フォントファミリー */
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .footer__inner {
@@ -87,7 +94,8 @@ input::placeholder {
 }
 
 .footer__copy {
-    font-family: sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
 }
 
 /* ページネーション */

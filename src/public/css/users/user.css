@@ -25,11 +25,12 @@
 .attendance__heading {
     margin-bottom: 20px;
     text-align: center;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
 }
+
+.attendance__heading h2{
+    font-size: 22px;
+}
+
 
 .attendance-table {
     margin: 30px auto;
@@ -43,7 +44,6 @@
 
 .attendance-table__row {
     border-bottom: 2px solid #ddd;
-
 }
 
 .attendance-table__row:first-child {
@@ -53,24 +53,26 @@
 .attendance-table__header {
     padding: 16px 8px;
 
-    font-weight: bold;
     text-align: left;
+
+    font-weight: 800;
+
 }
 
 .attendance-table__item {
-    padding: 16px 8px ;
-
+    padding: 16px 8px;
     text-align: left;
+
 }
 
 .attendance-table__header:first-of-type,
 .attendance-table__item:first-of-type {
-  padding-left: 48px;
+    padding-left: 48px;
 }
 
 .attendance-table__header:last-of-type,
 .attendance-table__item:last-of-type {
-  padding-right: 0px;
+    padding-right: 0px;
 }
 
 button[disabled] {

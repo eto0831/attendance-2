@@ -25,12 +25,12 @@
 }
 
 .attendance__heading {
-    margin-bottom: 20px;
+    margin: 30px auto 20px;
     text-align: center;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+}
+
+.attendance__heading h2{
+    font-size: 22px;
 }
 
 .search-form{
@@ -61,10 +61,11 @@
     background: #214be0;
     color: #fff;
     cursor: pointer;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 
@@ -89,7 +90,7 @@
 .attendance-table__header {
     padding: 12px;
     width: 20%;
-    font-weight: bold;
+    font-weight: 800;
 }
 
 .attendance-table__item {
@@ -109,10 +110,11 @@
     background: #214be0;
     color: #fff;
     cursor: pointer;
-    font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3",
-        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-    font-weight: 600;
     font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
 }
 
 /* *{
