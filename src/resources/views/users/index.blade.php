@@ -12,8 +12,7 @@
 <form class="search-form" action="/users/search" method="get">
   @csrf
   <div class="users-search">
-      <input type="text" class="search-form__item-input" placeholder="名前やID、メールアドレスを入力してください" name="keyword"
-          value="{{ old('keyword') }}">
+    <input type="text" class="search-form__item-input" placeholder="名前やID、メールアドレスを入力してください" name="keyword" value="{{ request('keyword') }}">
   </div>
   <div class="search-form__button">
       <button class="search-form__button-submit" type="submit">検索</button>
