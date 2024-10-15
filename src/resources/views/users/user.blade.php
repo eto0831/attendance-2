@@ -34,6 +34,9 @@
 
       @endforeach
     </table>
+    <div class="users-link">
+      <p><a href="/users">ユーザー一覧ページに戻る</a></p>
+    </div>
     {{ $attendances->withQueryString()->links('vendor.pagination.custom') }}
   </div>
 </div>

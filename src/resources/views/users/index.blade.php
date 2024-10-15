@@ -38,7 +38,7 @@
           @csrf
           <div class="detail-form__button">
             <input type="hidden" name="id" value="{{ $user['id'] }}">
-            <button class="detail-form__button-submit" type="submit">ユーザー別勤怠</button>
+            <button class="detail-form__button-submit btn" type="submit">ユーザー別勤怠</button>
           </div>
         </form>
       </td>

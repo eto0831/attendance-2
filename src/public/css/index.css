@@ -17,12 +17,11 @@
 }
 
 .welcome-message {
-    text-align: center
-
+    text-align: center;
 }
 
-.welcome-message__inner{
-  font-size: 20px;
+.welcome-message__inner {
+    font-size: 20px;
 }
 
 .attendance__panel {

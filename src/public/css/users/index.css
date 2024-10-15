@@ -92,14 +92,4 @@
 .detail-form__button-submit{
     padding: 4px 8px;
     width: 60%;
-    border: none;
-    border-radius: 5px;
-    background: #214be0;
-    color: #fff;
-    cursor: pointer;
-    font-size: 16px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
 }

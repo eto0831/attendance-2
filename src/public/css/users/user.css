@@ -79,7 +79,12 @@ button[disabled] {
     background-color: #ccc; /* グレーアウト */
     cursor: not-allowed !important; /* カーソルをポインタ以外に */
 }
-/*
-*{
-    border: solid 1px red;
-} */
+
+.users-link a {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    text-decoration: none;
+    color: #214be0;
+}
