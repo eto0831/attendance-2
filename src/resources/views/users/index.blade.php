@@ -15,7 +15,7 @@
     <input type="text" class="search-form__item-input" placeholder="名前やID、メールアドレスを入力してください" name="keyword" value="{{ request('keyword') }}">
   </div>
   <div class="search-form__button">
-      <button class="search-form__button-submit" type="submit">検索</button>
+      <button class="search-form__button-submit btn" type="submit">検索</button>
   </div>
 </form>
 

@@ -20,6 +20,7 @@ textarea,
 input {
     color: #909090;
     font-size: 16px;
+    padding-left: 10px;
 }
 
 textarea::placeholder,
@@ -87,6 +88,21 @@ input::placeholder {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+}
+
+.btn {
+    display: block;
+    padding: 4px 32px;
+    border: none;
+    background-color: #214be0;
+    color: #FFF;
+    font-size: 16px;
+    border-radius: 5px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
 }
 
 .footer__inner {

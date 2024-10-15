@@ -20,14 +20,16 @@
 			メールを送信しました。メールからメールアドレスの認証をお願いします。<br>
 			メールが届いていない場合は、下記のボタンをクリックしてください</a>。再送いたします。
 		</p>
-		<form method="post" action="{{ route('verification.send') }}">
-			@method('post')
-			@csrf
-			<div>
-				<button class="send-mail__button-submit" type="submit">確認メールを送信</button>
-			</div>
-		</form>
-		@endif
+		<div class="verify-email__form">
+			<form method="post" action="{{ route('verification.send') }}">
+				@method('post')
+				@csrf
+				<div>
+					<button class="send-mail__button-submit btn" type="submit">確認メールを送信</button>
+				</div>
+			</form>
+			@endif
+		</div>
 	</div>
 </div>
 @endsection
