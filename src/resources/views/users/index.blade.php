@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="attendance__heading">
-  <h2 class="welcome-message__inner">ユーザー一覧</h2>
+  <h2 class="welcome-message__inner">ユーザー 一覧</h2>
 </div>
 
 <form class="search-form" action="/users/search" method="get">
@@ -34,7 +34,7 @@
       <td class="attendance-table__item">{{ $user['name'] }}</td>
       <td class="attendance-table__item">{{ $user['email'] }}</td>
       <td class="attendance-table__item">
-        <form class="delete-form" action="/users/user_attendance" method="get">
+        <form class="detail-form" action="/users/user_attendance" method="get">
           @csrf
           <div class="detail-form__button">
               <input type="hidden" name="id" value="{{ $user['id'] }}">
