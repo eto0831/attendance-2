@@ -12,10 +12,11 @@
 <form class="search-form" action="/users/search" method="get">
   @csrf
   <div class="users-search">
-    <input type="text" class="search-form__item-input" placeholder="名前やID、メールアドレスを入力してください" name="keyword" value="{{ request('keyword') }}">
+    <input type="text" class="search-form__item-input" placeholder="名前やID、メールアドレスを入力してください" name="keyword"
+      value="{{ request('keyword') ?? old('keyword') }}">
   </div>
   <div class="search-form__button">
-      <button class="search-form__button-submit btn" type="submit">検索</button>
+    <button class="search-form__button-submit btn" type="submit">検索</button>
   </div>
 </form>
 
@@ -34,13 +35,13 @@
       <td class="attendance-table__item">{{ $user['email'] }}</td>
       <td class="attendance-table__item">
         <form class="delete-form" action="/users/user_attendance" method="get">
-          @method('GET')
           @csrf
           <div class="detail-form__button">
-            <input type="hidden" name="id" value="{{ $user['id'] }}">
-            <button class="detail-form__button-submit btn" type="submit">ユーザー別勤怠</button>
+              <input type="hidden" name="id" value="{{ $user['id'] }}">
+              <input type="hidden" name="keyword" value="{{ request('keyword') }}"> <div class="detail-form__button">
+              <button class="detail-form__button-submit btn" type="submit">ユーザー別勤怠</button>
           </div>
-        </form>
+      </form>
       </td>
       {{-- <td class="attendance-table__item">
         <form class="delete-form" action="/users/delete" method="post">
