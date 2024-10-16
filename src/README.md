@@ -45,7 +45,7 @@ php artisan db:seed
 - MYSQL8.0.26
 
 ## ER図
-![alt](erd.png)
+![ER図](src/erd.png)
 
 ## URL
 - 開発環境：http://localhost/
