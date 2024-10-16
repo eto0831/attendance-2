@@ -8,7 +8,7 @@
 <div class="attendance__content">
   <div class="date-navigation">
     <a href="{{ url()->current() }}?search_date={{ $previousDate }}" class="date-navigation__prev">&lt;</a>
-    <h2 class="date-navigation__current">{{ $currentDate }}</h2>
+    <h2 class="date-navigation__current" id="datePicker">{{ $currentDate }}</h2>
     <a href="{{ url()->current() }}?search_date={{ $nextDate }}" class="date-navigation__next">&gt;</a>
   </div>
 
@@ -39,4 +39,17 @@
     {{ $attendances->withQueryString()->links('vendor.pagination.custom') }}
   </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      flatpickr("#datePicker", {
+          dateFormat: "Y-m-d",
+          onChange: function(selectedDates, dateStr, instance) {
+              // 日付が選択された後、ページをリダイレクト
+              window.location.href = "{{ url()->current() }}?search_date=" + dateStr;
+          }
+      });
+  });
+  </script>
+
 @endsection
