@@ -35,9 +35,9 @@
       @endforeach
     </table>
     <div class="users-link">
-      <p><a href="/users">ユーザー 一覧に戻る</a></p>
+      <p><a href="/users">ユーザー一覧に戻る</a></p>
       @if (request('keyword'))
-      <p><a href="/users/search?keyword={{ request('keyword') }}">ユーザー 検索結果に戻る</a></p>
+      <p><a href="/users/search?keyword={{ request('keyword') }}">ユーザー検索結果に戻る</a></p>
       @endif
     </div>
     {{ $attendances->withQueryString()->links('vendor.pagination.custom') }}
