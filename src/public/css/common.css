@@ -83,7 +83,7 @@ input::placeholder {
     color: #000;
     cursor: pointer;
     font-size: 16px;
-    text-align: center; /* 中央揃え */
+    text-align: center;
     font-family: "Noto Sans JP", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
