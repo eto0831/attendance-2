@@ -12,6 +12,8 @@
 3. 「.env.example」ファイルを 「.env」ファイルに命名を変更。または新しく「.env」ファイルを作成
 4. .envに以下の環境変数を追加
 ``` text
+APP_NAME=Atte
+
 DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
@@ -23,6 +25,15 @@ PMA_ARBITRARY=1
 PMA_HOST=mysql
 PMA_USER=laravel_user
 PMA_PASSWORD=laravel_pass
+
+MAIL_MAILER=smtp
+MAIL_HOST=mailhog
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS=test@example.com
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 5. アプリケーションキーの作成
 ``` bash

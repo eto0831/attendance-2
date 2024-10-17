@@ -27,7 +27,10 @@
     height: 20px;
     color: #ff0000;
     text-align: left;
+    white-space: nowrap; /* ここを追加 */
+    word-break: break-all; /* ここを追加 */
 }
+
 
 .form__input--text input {
     width: 100%;
