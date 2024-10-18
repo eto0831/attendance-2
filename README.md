@@ -28,6 +28,7 @@
 3. `docker-compose up -d --build`
 
 ## テーブル設計
+![テーブル設計](src/table.png)
 
 ## ER図
 ![ER図](src/erd.png)
@@ -75,3 +76,9 @@ php artisan migrate
 ``` bash
 php artisan db:seed
 ```
+## テストアカウント
+シーディングを実行すると
+
+## 注意事項
+.envファイルがスクールでの通常のプロジェクトの設定と少し異なっているため、
+お手数ですが上記のLaravel環境構築に記載の環境変数をご入力ください。
