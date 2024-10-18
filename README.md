@@ -27,12 +27,6 @@
 2. DockerDesktopアプリを立ち上げる
 3. `docker-compose up -d --build`
 
-## テーブル設計
-![テーブル設計](src/table.png)
-
-## ER図
-![ER図](src/erd.png)
-
 **Laravel環境構築**
 1. `docker-compose exec php bash`
 2. `composer install`
@@ -76,6 +70,13 @@ php artisan migrate
 ``` bash
 php artisan db:seed
 ```
+
+## テーブル設計
+![テーブル設計](src/table.png)
+
+## ER図
+![ER図](src/erd.png)
+
 ## テストアカウント
 シーディングを実行すると
 
