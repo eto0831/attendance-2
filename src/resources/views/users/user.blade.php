@@ -43,5 +43,4 @@
     {{ $attendances->withQueryString()->links('vendor.pagination.custom') }}
   </div>
 </div>
-</div>
 @endsection
