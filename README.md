@@ -10,10 +10,10 @@
 - 開発環境ユーザー一覧ページ：http://localhost/users
 - phpMyAdmin：http://localhost:8080/
 - MailHog：http://localhost:8025/
-- 本番環境ホーム：http://35.77.94.54/
-- 本番環境ユーザー一覧ページ：http://35.77.94.54/users
-- 本番環境 phpMyAdmin：http://35.77.94.54:8080/
-- 本番環境 MailHog：http://35.77.94.54:8025/
+- 本番環境ホーム：http://54.65.247.104/
+- 本番環境ユーザー一覧ページ：http://54.65.247.104/users
+- 本番環境 phpMyAdmin：http://54.65.247.104:8080/
+- 本番環境 MailHog：http://54.65.247.104:8025/
 
 ## 使用技術(実行環境)
 - PHP8.3.9
