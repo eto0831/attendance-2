@@ -51,7 +51,6 @@ class Attendance extends Model
 
         $actualWorkingTime = $totalWorkingTime - $totalBreakTime;
 
-        // ここで修正
         $hours = str_pad(floor($actualWorkingTime / 3600), 2, '0', STR_PAD_LEFT); // 時間を計算
         $minutes = str_pad(floor(($actualWorkingTime % 3600) / 60), 2, '0', STR_PAD_LEFT); // 分を計算
         $seconds = str_pad($actualWorkingTime % 60, 2, '0', STR_PAD_LEFT); // 秒を計算

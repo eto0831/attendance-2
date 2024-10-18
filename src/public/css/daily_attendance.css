@@ -62,7 +62,7 @@
     border-bottom: 2px solid #ddd;
 }
 
-.attendance-table__row:first-child { /* 最初の行のみに適用 */
+.attendance-table__row:first-child {
     border-top: 2px solid #ddd;
 }
 
@@ -81,7 +81,3 @@ button[disabled] {
     background-color: #ccc; /* グレーアウト */
     cursor: not-allowed !important; /* カーソルをポインタ以外に */
 }
-
-/* *{
-    border: solid 1px red;
-} */

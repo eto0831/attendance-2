@@ -43,16 +43,6 @@
           </div>
       </form>
       </td>
-      {{-- <td class="attendance-table__item">
-        <form class="delete-form" action="/users/delete" method="post">
-          @method('DELETE')
-          @csrf
-          <div class="delete-form__button">
-            <input type="hidden" name="id" value="{{ $user['id'] }}">
-            <button class="delete-form__button-submit" type="submit">削除</button>
-          </div>
-        </form>
-      </td> --}}
     </tr>
 
     @endforeach
