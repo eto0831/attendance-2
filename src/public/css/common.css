@@ -2,6 +2,7 @@
     background: white;
     height: 80px;
 }
+
 main {
     background-color: #eee;
     min-height: calc(100vh - 130px);
@@ -36,14 +37,16 @@ input::placeholder {
 
 .header__inner {
     margin: 0 auto;
-    padding: 20px 15px;
+    padding: 0 25px;
     max-width: 1230px;
+    height: 100%;
 }
 
 .header-utilities {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 100%;
 }
 
 .header__logo {
